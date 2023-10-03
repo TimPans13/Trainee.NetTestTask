@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AyamgeIz+R65q8wBKU1EMcuOnnx3D8+mjWLxb6G2Q05VoJ1nzY25nf5tLjf4OvDrPuiErxdPorSvMgQF+sXzcA==",
+  "dgSpecHash": "FkY9xhJNEndJWdQdcZlkAiZMu0mOcK1Y1z09WxuXbZKZMG/Vrzp8L5QL/t3yum0++YwVFzN15ZPZSpUJO8uK9A==",
   "success": true,
-  "projectFilePath": "D:\\Traine.NetTestTask\\TestTask\\TestTask\\TestTask.csproj",
+  "projectFilePath": "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\TestTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Traine.NetTestTask\\TestTask\\TestTask\\TestTask.csproj": {}
+    "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\TestTask.csproj": {}
   },
   "projects": {
-    "D:\\Traine.NetTestTask\\TestTask\\TestTask\\TestTask.csproj": {
+    "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\TestTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Traine.NetTestTask\\TestTask\\TestTask\\TestTask.csproj",
+        "projectUniqueName": "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\TestTask.csproj",
         "projectName": "TestTask",
-        "projectPath": "D:\\Traine.NetTestTask\\TestTask\\TestTask\\TestTask.csproj",
+        "projectPath": "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\TestTask.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Traine.NetTestTask\\TestTask\\TestTask\\obj\\",
+        "outputPath": "D:\\Trainee.NetTestTask\\TestTask\\Trainee.NetTestTask\\TestTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
