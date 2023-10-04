@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
 using TestTask.Data;
-using TestTask.Enums;
 using TestTask.Models;
-
 
 namespace TestTask.Services.Interfaces
 {
@@ -26,29 +19,12 @@ namespace TestTask.Services.Interfaces
             try
             {
                 var orderWithHighestTotalAmount = await _context.Orders
-                     .Include(u => u.User)
-    .OrderByDescending(o => o.Price * o.Quantity)
-
- //.Select(o => new Order
- //{
- //    Id = o.Id,
- //    ProductName = o.ProductName,
- //    Price = o.Price,
- //    Quantity = o.Quantity,
- //    UserId = o.UserId,
- //    User = o.User != null && o.User.Orders.Any() ? new User
- //    {
- //        Id = o.User.Id,
- //        Email = o.User.Email,
- //        Status = o.User.Status
- //    } : null
- //})
-
-    .FirstOrDefaultAsync();
+                    .Include(u => u.User)
+                    .OrderByDescending(o => o.Price * o.Quantity)
+                    .FirstOrDefaultAsync();
 
                 return orderWithHighestTotalAmount;
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred in GetOrder: {ex.Message}");
@@ -61,32 +37,29 @@ namespace TestTask.Services.Interfaces
             try
             {
                 var ordersWithQuantityGreaterThanTen = await _context.Orders
-                                        .Include(u => u.User)
                     .Where(o => o.Quantity > minimumQuantity)
-                    //.Select(o => new Order
-                    //{
-                    //    Id = o.Id,
-                    //    ProductName = o.ProductName,
-                    //    Price = o.Price,
-                    //    Quantity = o.Quantity,
-                    //    UserId = o.UserId,
-                    //    User = o.User != null && o.User.Orders.Any() ? new User
-                    //    {
-                    //        Id = o.User.Id,
-                    //        Email = o.User.Email,
-                    //        Status = o.User.Status
-                    //    } : null
-                    //})
-
+                    .Select(o => new Order
+                    {
+                        Id = o.Id,
+                        ProductName = o.ProductName,
+                        Price = o.Price,
+                        Quantity = o.Quantity,
+                        UserId = o.UserId,
+                        User = o.User != null && o.User.Orders.Any() ? new User
+                        {
+                            Id = o.User.Id,
+                            Email = o.User.Email,
+                            Status = o.User.Status,
+                        } : null
+                    })
                     .ToListAsync();
-               
+
                 return ordersWithQuantityGreaterThanTen;
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred in GetOrders: {ex.Message}");
-                throw; 
+                throw;
             }
         }
     }
