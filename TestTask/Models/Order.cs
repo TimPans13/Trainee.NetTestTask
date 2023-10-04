@@ -1,5 +1,8 @@
-﻿namespace TestTask.Models
+﻿using System.Text.Json.Serialization;
+namespace TestTask.Models
+
 {
+
     public class Order
     {
         public int Id { get; set; }

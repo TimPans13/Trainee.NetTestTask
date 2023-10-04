@@ -11,7 +11,9 @@ namespace TestTask.Models
 
         public UserStatus Status { get; set; }
 
-        [JsonIgnore]
         public virtual List<Order> Orders { get; set; }
     }
 }
+
+
+

@@ -18,6 +18,7 @@ namespace TestTask.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<User>().HasData(
                 new User[]
                 {
@@ -27,7 +28,7 @@ namespace TestTask.Data
                     new User { Id=4, Email="user4@gmail.com", Status=UserStatus.Active},
                     new User { Id=5, Email="user5@gmail.com", Status=UserStatus.Inactive},
                     new User { Id=6, Email="user6@gmail.com", Status=UserStatus.Inactive},
-                    new User { Id=7, Email="user7@gmail.com", Status=UserStatus.Active},
+                    new User { Id=7, Email="user7@gmail.com", Status=UserStatus.Inactive},
                 });
 
             modelBuilder.Entity<Order>().HasData(
@@ -49,6 +50,8 @@ namespace TestTask.Data
                     new Order {Id=14, ProductName="Pumpkin", Price=50, Quantity=1, UserId=7},
                     new Order {Id=15, ProductName="Watermelon", Price=100, Quantity=12, UserId=7},
                 });
+
+
         }
     }
 }
